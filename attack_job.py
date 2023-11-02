@@ -267,4 +267,4 @@ if __name__ == "__main__":
             print("Meet: ", e)
         print("Total: %s, Index: %s, Round: %s " % (len(_SITES), sys.argv[1], _round))
         _round += 1
-        time.sleep(0.5 * random.random())
+        time.sleep(0.6 * random.random())
