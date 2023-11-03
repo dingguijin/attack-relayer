@@ -2,13 +2,21 @@ import sys
 import math
 
 _SITES = [
-        {
-        "isValid": True,
-        "realUrl": "http://eth.maxstorn.xyz/",
-        "name": "nice-relayer.eth",
-        "address": "0xb0Cdc0AB2D454F2360d4629d519819E13DBE816A",
-        "relayerAddress": "0xb0Cdc0AB2D454F2360d4629d519819E13DBE816A",
-        },
+{
+    "isValid": True,
+    "realUrl": "http://mainnet.firstrelayer.xyz/",
+    "name": "first-relayer.eth",
+    "address": "0xD8f1Eb586Ecb93745392EE254a028f1F67E1437E",
+    "relayerAddress": "0xD8f1Eb586Ecb93745392EE254a028f1F67E1437E",
+},
+
+{
+    "isValid": True,
+    "realUrl": "http://eth.maxstorn.xyz/",
+    "name": "nice-relayer.eth",
+    "address": "0xb0Cdc0AB2D454F2360d4629d519819E13DBE816A",
+    "relayerAddress": "0xb0Cdc0AB2D454F2360d4629d519819E13DBE816A",
+},
 
     {
         "isValid": True,
