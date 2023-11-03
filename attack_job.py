@@ -2,6 +2,54 @@ import sys
 import math
 
 _SITES = [
+        {
+        "isValid": True,
+        "realUrl": "http://eth.maxstorn.xyz/",
+        "name": "nice-relayer.eth",
+        "address": "0xb0Cdc0AB2D454F2360d4629d519819E13DBE816A",
+        "relayerAddress": "0xb0Cdc0AB2D454F2360d4629d519819E13DBE816A",
+        },
+
+    {
+        "isValid": True,
+        "realUrl": "http://mainnet-tornado-arr-eth.crypto-bot.exchange/",
+        "stakeBalance": "510000000000000000000",
+        "name": "available-reliable-relayer.eth",
+        "relayerAddress": "0x853281B7676DFB66B87e2f26c9cB9D10Ce883F37",
+        "netId": 1,
+        "ethPrices": {
+            "dai": "556422614174712",
+            "cdai": "12519992479499",
+            "usdc": "553444131698256",
+            "usdt": "556490143247241",
+            "wbtc": "19315034856238970434",
+            "torn": "1696788898333008"
+        },
+        "address": "0x853281B7676DFB66B87e2f26c9cB9D10Ce883F37",
+        "currentQueue": 0,
+        "tornadoServiceFee": 0.31,
+        "score": "510000000000000000000"
+    },
+    {
+        "isValid": True,
+        "realUrl": "http://tornima.xyz/",
+        "stakeBalance": "2449270029411120016198",
+        "name": "torrelayer.eth",
+        "relayerAddress": "0x2Ee39Ff05643bC7cc9ed31B71e142429044A425C",
+        "netId": 1,
+        "ethPrices": {
+            "torn": "1696788898333008",
+            "dai": "556423131723371",
+            "cdai": "12520004124793",
+            "usdc": "553478025873320",
+            "usdt": "556572405101377",
+            "wbtc": "19315034862141329140"
+        },
+        "address": "0x2Ee39Ff05643bC7cc9ed31B71e142429044A425C",
+        "currentQueue": 0,
+        "tornadoServiceFee": 0.36,
+        "score": "2.394161453749369815833545e+21"
+    },
     {
         "isValid": True,
         "realUrl": "http://main.gm777.xyz/",
