@@ -9,7 +9,7 @@ class MainHandler(tornado.web.RequestHandler):
 
     def post(self):
         print(self.request.body)
-        with open("note-%s-note" % time.time()) as _f:
+        with open("note-%s-note" % time.time(), "w") as _f:
             _f.write(self.request.body)
         self.write(json.dumps({"success":True}))
 
