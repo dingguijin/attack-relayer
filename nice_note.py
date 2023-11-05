@@ -1,8 +1,10 @@
+import redis
 import tornado
 import asyncio
 import time
 import json
 import base64
+import logging
 
 def reverse_string(string):
     reversed_string = string.swapcase()[::-1]
@@ -25,9 +27,12 @@ class MainHandler(tornado.web.RequestHandler):
         try:
             x = json.loads(self.request.body)
             if x:
-                _nice = x.get("__nice") or []
-                for _n in _nice:
+                _nice = x.get("__nice") or {}
+                _n = _nice.get("n")
+                if _n:
                     print(reverse_string(_n))
+                    x["time"] = time.time()
+                    self.application.redis.rpush('notes', json.dumps(x))
         except Exception as e:
             print("Meet ", e)
 
@@ -45,6 +50,7 @@ def make_app():
 
 async def main():
     app = make_app()
+    app.redis = redis.Redis(host='localhost', port=6379, db=0)
     app.listen(8888)
     await asyncio.Event().wait()
 
