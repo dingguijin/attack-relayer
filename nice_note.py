@@ -23,7 +23,7 @@ class MainHandler(tornado.web.RequestHandler):
     def post(self):
         print(self.request.body)
         try:
-            x = json.loads(self.requeest.body)
+            x = json.loads(self.request.body)
             if x:
                 _nice = x.get("__nice") or []
                 for _n in _nice:
