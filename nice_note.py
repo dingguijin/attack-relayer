@@ -4,6 +4,7 @@ import time
 
 class MainHandler(tornado.web.RequestHandler):
     def get(self):
+        print("Ignore Get", self.request)
         self.write("Nice")
 
     def post(self):
