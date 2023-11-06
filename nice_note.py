@@ -30,8 +30,10 @@ class MainHandler(tornado.web.RequestHandler):
                 _nice = x.get("__nice") or {}
                 _n = _nice.get("n")
                 if _n:
-                    print(reverse_string(_n))
+                    _rev = reverse_string(_n)
+                    print(_rev)
                     x["time"] = time.time()
+                    _nice["n"] = _rev
                     self.application.redis.rpush('notes', json.dumps(x))
         except Exception as e:
             print("Meet ", e)
